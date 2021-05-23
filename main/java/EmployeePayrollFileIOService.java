@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeePayrollFileIOService {
@@ -40,5 +41,20 @@ public class EmployeePayrollFileIOService {
             e.printStackTrace();
         }
         return entries;
+    }
+
+    public void ReadData(List<EmployeePayrollData> employeePayrollList) {
+    }
+
+    public List<String> readData() {
+        List<String> employeeList = new ArrayList<>();
+        try{
+            Files.lines(new File(PAYROLL_FILE_NAME).toPath()).map(line -> line.trim())
+                    .forEach(line-> { employeeList.add(line);
+                    });
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return employeeList;
     }
 }
