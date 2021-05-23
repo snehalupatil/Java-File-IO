@@ -20,13 +20,12 @@ public class EmployeePayrollService {
     }
 
     private void readEmployeePayRollData(Scanner consoleInputReadr){
-    System.out.println("Enter Employee Id:");
-    int id = consoleInputReadr.nextInt();
-    System.out.println("Enter Employee Name:");
-    String name =consoleInputReadr.next();
-    System.out.println("Enter Employee Salary:");
-    double salary = consoleInputReadr.nextDouble();
-
+        System.out.println("Enter Employee Id:");
+        int id = consoleInputReadr.nextInt();
+        System.out.println("Enter Employee Name:");
+        String name =consoleInputReadr.next();
+        System.out.println("Enter Employee Salary:");
+        double salary = consoleInputReadr.nextDouble();
     }
 
     private void writeEmployeePayRollData(){
